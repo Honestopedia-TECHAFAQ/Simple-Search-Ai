@@ -1,0 +1,19 @@
+API Keys: Make sure you've properly added your API keys to the .env file for eBay, Google, SERP, and Amazon APIs. Without valid API keys, the search functionality will not work.
+
+PHP Server: Ensure that your server is running PHP (PHP 7.0+ recommended). You can test this by placing a simple phpinfo(); script on your server to confirm PHP is properly installed and configured.
+
+API Access: Check that your API keys have the necessary access permissions and that your requests are formatted correctly. If you encounter issues with any specific API, you may need to troubleshoot their documentation or check rate limits.
+
+Correct API Endpoint URLs: Double-check the URLs for each API (ebay.php, google.php, serp.php, amazon.php) to ensure they match the current specifications from the respective services. API versions can change, so it's important that you're using the correct ones.
+
+File Permissions: Ensure that the necessary files are readable and executable by the server. The api/ and assets/ directories should be accessible for the PHP script to include and use.
+
+CURL Support: Ensure that your PHP installation supports CURL (used to make HTTP requests). You can check this by running php -m and ensuring curl is listed.
+
+Error Handling: You might want to add additional error handling to your API request functions (in case of network issues, invalid responses, or API failures). For example, check the curl_error() result after each CURL request to catch issues.
+
+To Test It:
+Make sure all files are correctly uploaded to your server.
+Open your browser and navigate to index.php (e.g., http://yourdomain.com/index.php).
+Type in a product search term in the search input field and hit Search.
+The results from eBay, Google, SERP, and Amazon should display under their respective headings.
